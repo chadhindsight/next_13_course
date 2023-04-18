@@ -1,9 +1,9 @@
-const loading = () => {
+const LoadingPage = () => {
     return (
-        <div>
-            
+        <div className="loader">
+            <div className="spinner"></div>
         </div>
     );
 };
 
-export default loading;
+export default LoadingPage;
