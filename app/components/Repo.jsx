@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaCodeBranch, FaEye, FaStar } from 'react-icons/fa';
 
 const fetchRepo = async function (name) {
