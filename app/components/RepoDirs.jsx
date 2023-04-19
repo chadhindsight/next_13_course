@@ -1,6 +1,12 @@
 import React from 'react';
 
-const RepoDirs = () => {
+async function fetchRepoContents(name) {
+    
+}
+
+const RepoDirs = async ({name}) => {
+    const repContents = await fetchRepoContents(name)
+
     return (
         <div>
             
