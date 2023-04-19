@@ -1,23 +1,25 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 async function fetchRepoContents(name) {
-    await new Promise ((resovle) => setTimeout(resovle, 2000))
+  await new Promise((resolve) => setTimeout(resolve, 3000));
 
-    const response = await fetch(`https://api.github.com/users/chadhindsight/repos${name}/contents`,
+  const response = await fetch(
+    `https://api.github.com/repos/chadhindsight/${name}/contents`,
     {
-        next: {
-            revalidate: 60,
-        },
+      next: {
+        revalidate: 60,
+      },
     }
-    );
-    const contents = await response.json();
-    return contents
+  );
+  const contents = await response.json();
+  return contents;
 }
 
-const RepoDirs = async ({name}) => {
-    const repoContents = await fetchRepoContents(name)
+const RepoDirs = async ({ name }) => {
+  const repoContents = await fetchRepoContents(name);
+  const dirs = repoContents.filter((content) => content.type === 'dir');
 
-     return (
+  return (
     <>
       <h3>Directories</h3>
       <ul>
@@ -30,5 +32,4 @@ const RepoDirs = async ({name}) => {
     </>
   );
 };
-
 export default RepoDirs;
