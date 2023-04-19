@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCodeBranch, FaStar } from 'react-icons/fa';
+import { FaCodeBranch, FaEye, FaStar } from 'react-icons/fa';
 
 const fetchRepo = async function (name) {
     const response = await fetch(`https://api.github.com/repos/chadhindsight/${name}`)
