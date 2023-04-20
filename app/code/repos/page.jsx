@@ -5,7 +5,7 @@ async function fetchRepos() {
   const response = await fetch(
     'https://api.github.com/users/chadhindsight/repos',
     {
-      // the number of seconds to wait before new data is fetched
+      // The number of seconds to wait before new data is fetched
       next: {
         revalidate: 60,
       },

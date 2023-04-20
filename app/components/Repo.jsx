@@ -1,7 +1,12 @@
 import { FaCodeBranch, FaEye, FaStar } from 'react-icons/fa';
 
 const fetchRepo = async function (name) {
-    const response = await fetch(`https://api.github.com/repos/chadhindsight/${name}`)
+    const response = await fetch(`https://api.github.com/repos/chadhindsight/${name}`, {
+      // The number of seconds to wait before new data is fetched
+      next: {
+        revalidate: 60,
+      },
+    })
 
     const repo = await response.json()
     console.log(repo)
