@@ -8,9 +8,8 @@ const fetchRepo = async function (name) {
       },
     })
 
-    const repo = await response.json()
-    console.log(repo)
-    return repo
+    const repoTing = await response.json()
+    return repoTing
 }
 
 const Repo = async ({name}) => {
