@@ -5,3 +5,10 @@ import { NextResponse } from 'next/server';
 export async function GET() {
     return NextResponse.json(courses)
 }
+
+export async function POST(request) {
+    const course = await request.json();
+    courses.push(course);
+
+    return NextResponse.json(course);
+}
