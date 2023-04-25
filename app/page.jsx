@@ -26,7 +26,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h1>Welcome To Traversy Meida</h1>
+      <h1>Welcome To Chad's Project</h1>
       <CourseSearch getSearchResults={(results) => setCourses(results)} />
       <Courses courses={courses} />
     </>
