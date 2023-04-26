@@ -7,8 +7,8 @@ const CourseSearch = ({ getSearchResults }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`/api/courses/search?query=${query}`);
-    const courses = await res.json();
+    const response = await fetch(`/api/courses/search?query=${query}`);
+    const courses = await response.json();
     getSearchResults(courses);
   };
 
