@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 
+// Handles searching for courses
 const CourseSearch = ({ getSearchResults }) => {
   const [query, setQuery] = useState('');
 
@@ -27,4 +28,5 @@ const CourseSearch = ({ getSearchResults }) => {
     </form>
   );
 };
+
 export default CourseSearch;
