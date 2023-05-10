@@ -7,7 +7,7 @@ import CourseSearch from './components/CourseSearch';
 const HomePage = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
-
+// all good tings
   useEffect(() => {
     const fetchCourses = async () => {
       const res = await fetch('/api/courses');
@@ -31,4 +31,5 @@ const HomePage = () => {
     </>
   );
 };
+
 export default HomePage;
